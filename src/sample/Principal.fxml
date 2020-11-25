@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="541.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <TabPane layoutY="105.0" prefHeight="295.0" prefWidth="541.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Escribir">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextArea fx:id="agregar" layoutX="14.0" layoutY="14.0" prefHeight="206.0" prefWidth="511.0" />
+                        <Button layoutX="473.0" layoutY="227.0" mnemonicParsing="false" onAction="#Escribir" text="Guardar" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab onSelectionChanged="#leer" text="Leer">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextArea fx:id="lecturaA" layoutX="21.0" layoutY="19.0" prefHeight="229.0" prefWidth="497.0" />
+                        <ScrollBar layoutX="496.0" layoutY="19.0" orientation="VERTICAL" prefHeight="229.0" prefWidth="22.0" />
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Buscar">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="28.0" layoutY="14.0" text="Palabra" />
+                        <TextField fx:id="busqueda" layoutX="74.0" layoutY="10.0" prefHeight="25.0" prefWidth="206.0" />
+                        <Button layoutX="294.0" layoutY="10.0" mnemonicParsing="false" onAction="#Buscar" text="Buscar" />
+                        <TextArea fx:id="encontrado" layoutX="28.0" layoutY="44.0" prefHeight="200.0" prefWidth="488.0" />
+                        <TableView fx:id="tabla" layoutX="21.0" layoutY="44.0" prefHeight="200.0" prefWidth="496.0">
+                          <columns>
+                            <TableColumn prefWidth="207.0" text="C1" />
+                            <TableColumn prefWidth="186.0" text="C2" />
+                          </columns>
+                        </TableView>
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <Label layoutX="14.0" layoutY="38.0" text="Nombre" />
+      <RadioButton fx:id="directorio" layoutX="271.0" layoutY="38.0" mnemonicParsing="false" onAction="#BotonDirectorio" text="Directorio" />
+      <TextField fx:id="archivo" layoutX="87.0" layoutY="34.0" />
+      <TextField fx:id="carpeta" disable="true" layoutX="375.0" layoutY="34.0" />
+      <Button layoutX="14.0" layoutY="73.0" mnemonicParsing="false" onAction="#accion" prefHeight="25.0" prefWidth="133.0" text="Crear" />
+      <Button layoutX="212.0" layoutY="73.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="25.0" prefWidth="133.0" text="Eliminar" />
+      <Button layoutX="391.0" layoutY="73.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="133.0" text="Limpiar" />
+   </children>
+</Pane>
